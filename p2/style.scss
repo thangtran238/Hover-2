@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$bordercolor: #f2726a;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+  height: 100vh;
+  background: linear-gradient(45deg,#00853e,#50c878);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+}
+.card {
+  margin: 0 20px;
+  background: #242628;
+  height: 400px;
+  width:300px;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  .card-img {
+    width:120px;
+    height: 120px;
+    border: 4px solid $bordercolor;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    transform: translateY(25px);
+    transition: 0.5s;
+    &:hover {
+      width: 100%;
+      height:100%;
+      border-radius: unset;
+      transform: unset;
+      border: none;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      object-position: center;
+    }
+  }
+  h2 {
+    margin-top: 30px;
+  }
+  p {
+    color: $bordercolor;
+  }
+  .card-social {
+    margin: 25px 0;
+    a {
+      color: white;
+      margin: 25px 20px;
+      font-size: 20px;
+      transition: .5s;
+      &:hover {
+        color: $bordercolor;
+      }
+    }
+  }
+  button {
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border: 1px solid $bordercolor;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s; 
+    cursor:pointer;
+    &:hover {
+      background: $bordercolor;
+    }
+  }
+}
